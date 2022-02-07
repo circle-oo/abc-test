@@ -3,16 +3,16 @@
 
 n = int(input())
    
-dp = [1e12 for i in range(101010)]
-dp[0] = 0
-dp[1] = 1
-dp[2] = 2
+m = [1e12 for i in range(101010)]
+m[0] = 0
+m[1] = 1
+m[2] = 2
     
 for i in range(3, n+1):
     for j in range(1, i):
         if i - j*j < 0:
             break
-        dp[i] = min(dp[i], dp[i-j*j] + 1)
+        m[i] = min(m[i], m[i-j*j] + 1)
 
-print(dp[n])
-print(dp[n+1])
+print(m[n])
+print(m[n+1])
