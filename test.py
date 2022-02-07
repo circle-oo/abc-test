@@ -8,11 +8,7 @@ m[0] = 0
 m[1] = 1
 m[2] = 2
     
-for i in range(3, n+1):
-    for j in range(1, i):
-        if i - j*j < 0:
-            break
-        m[i] = min(m[i], m[i-j*j] + 1)
 
-print(m[n])
-print(m[n+1])
+i = 0
+
+print(i+1)
