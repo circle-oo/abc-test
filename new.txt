@@ -7,7 +7,7 @@ using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 
 int N, H[101010];
-set<pair<int, int>> M;
+set<pair<int, int>> S;
 vector<pii> V, R;
 set<pair<int, int>>::iterator it;
 int e;
@@ -26,16 +26,16 @@ int main() {
         e = max(e, r);
     }
 
-    M.insert({0, 2e9});
+    S.insert({0, 2e9});
     sort(V.begin(), V.end());
 
     for (int i = 0; i < V.size(); i++) {
         auto [x, t] = V[i];
         if (t > 0) {
-            M.insert({H[t], t});
+            S.insert({H[t], t});
         } else if (t < 0) {
             t = -t;
-            M.erase(M.find({H[t], t}));
+            S.erase(S.find({H[t], t}));
         }
         if (i < V.size() - 1 && x != V[i+1].first) {
             int mh = 0;
