@@ -15,3 +15,4 @@ for i in range(3, n+1):
         m[i] = min(m[i], m[i-j*j] + 1)
 
 print(m[n])
+print(m[n+1])
