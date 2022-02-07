@@ -15,3 +15,4 @@ for i in range(3, n+1):
         dp[i] = min(dp[i], dp[i-j*j] + 1)
 
 print(dp[n])
+print(dp[n+1])
