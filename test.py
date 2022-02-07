@@ -10,4 +10,4 @@ dp[2] = 2
     
 i = 0
 
-print(i)
+print(i+1)
